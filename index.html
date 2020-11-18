@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edward Mrdoian - Personal Page</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="./js/jquery-3.5.1.min.js"></script>
+    <link rel="shortcut icon"  href="/favicon/favicon.ico">
+</head>
+<body>
+    <div  class="page">
+        <nav>
+        <a class="menu_closed"  title="open menu" href="#"></a>
+            <ul class="show-desktop hide-mobile ">
+                <li id="exit" class=" hide-desktop"><a class="exit-btn" href="#" title="close menu"></a></li>
+                <li class="home"><a id="em" class="m" href="#">Eduard Mrdoyan</a></li>
+                <li class="resume"><a class="m" target="_blank" href="./resume/Resume.pdf">Resume</a></li>
+                <li class="contact"><a id="ct" class="m" href="#">Contact</a></li>
+                <li class="instagram"><a id="inst" class="m" target="_blank" href="https://www.instagram.com/edwardmrdoian_23/"></a></li>
+            </ul>
+        </nav>
+        <div id="title" class="sized">
+            <h1><a href="/index.html">Eduard Mrdoyan</a></h1>
+            <h2>Student at Tbilisi State University</h2>
+            <div class="Bio">               
+                I study electrical engineering at Tbilisi state university. Along with electrical engineering, I am very interested in
+                programming and I'm going to learn it more deeply. At this point in my life I am looking for a job to gain more
+                experience in this field.<br><br>For more information check my <em><strong><a href="https://www.linkedin.com/in/edward-m23/" target="_blank">Linkedin </a></strong></em>and 
+                <em><strong><a href="https://github.com/edwardmrdoian" target="_blank">Github </a></strong></em> profile.              
+            </div>
+        </div>       
+        <div contact-info id="contact">
+            <div class="contact__overlay"></div>
+            <div class="contact__container">
+                <div class="contact__popup"><a class="contact__close" ng-click="hideContact()"><i class="las la-times"></i></a>
+                    <!-- ngRepeat: item in contactData -->
+                    <div ng-repeat="item in contactData" class="contact__item ng-scope contact__item--title"
+                        ng-class="'contact__item--' + item.type">
+                        <div class="contact__item__label ng-binding" ng-bind="item.label"></div>
+                        <div class="contact__item__content ng-binding" ng-bind-html="renderContactInfo(item)|safe">Contact me</div>
+                    </div><!-- end ngRepeat: item in contactData -->
+                    <div ng-repeat="item in contactData" class="contact__item ng-scope contact__item--text"
+                        ng-class="'contact__item--' + item.type">
+                        <div class="contact__item__label ng-binding" ng-bind="item.label"></div>
+                        <div class="contact__item__content ng-binding" ng-bind-html="renderContactInfo(item)|safe">I can be reached
+                            at the following email address and phone number.</div>
+                    </div><!-- end ngRepeat: item in contactData -->
+                    <div ng-repeat="item in contactData" class="contact__item ng-scope contact__item--info"
+                        ng-class="'contact__item--' + item.type">
+                        <div class="contact__item__label ng-binding" ng-bind="item.label">Email</div>
+                        <div class="contact__item__content ng-binding" ng-bind-html="renderContactInfo(item)|safe"><a
+                                href="mailto:edomrdoian23@gmail.com"
+                                title="mailto:edomrdoian23@gmail.com">edomrdoian23@gmail.com</a></div>
+                    </div><!-- end ngRepeat: item in contactData -->
+                    <div ng-repeat="item in contactData" class="contact__item ng-scope contact__item--info"
+                        ng-class="'contact__item--' + item.type">
+                        <div class="contact__item__label ng-binding" ng-bind="item.label">Phone</div>
+                        <div class="contact__item__content ng-binding" ng-bind-html="renderContactInfo(item)|safe">+995 555 18 76 23
+                        </div>
+                    </div><!-- end ngRepeat: item in contactData -->
+                </div>
+            </div>
+            <div class="contact__popup"><a class="contact__close" ng-click="hideContact()"><i class="las la-times"></i></a>
+                <!-- ngRepeat: item in contactData -->
+                <div ng-repeat="item in contactData" class="contact__item ng-scope contact__item--title"
+                    ng-class="'contact__item--' + item.type">
+                    <div class="contact__item__label ng-binding" ng-bind="item.label"></div>
+                    <div class="contact__item__content ng-binding" ng-bind-html="renderContactInfo(item)|safe">Contact me</div>
+                </div><!-- end ngRepeat: item in contactData -->
+                <div ng-repeat="item in contactData" class="contact__item ng-scope contact__item--text"
+                    ng-class="'contact__item--' + item.type">
+                    <div class="contact__item__label ng-binding" ng-bind="item.label"></div>
+                    <div class="contact__item__content ng-binding" ng-bind-html="renderContactInfo(item)|safe">I can be reached at
+                        the following email address and phone number.</div>
+                </div><!-- end ngRepeat: item in contactData -->
+                <div ng-repeat="item in contactData" class="contact__item ng-scope contact__item--info"
+                    ng-class="'contact__item--' + item.type">
+                    <div class="contact__item__label ng-binding" ng-bind="item.label">Email</div>
+                    <div class="contact__item__content ng-binding" ng-bind-html="renderContactInfo(item)|safe"><a
+                            href="mailto:edomrdoian23@gmail.com" title="mailto:edomrdoian23@gmail.com">edomrdoian23@gmail.com</a>
+                    </div>
+                </div><!-- end ngRepeat: item in contactData -->
+                <div ng-repeat="item in contactData" class="contact__item ng-scope contact__item--info"
+                    ng-class="'contact__item--' + item.type">
+                    <div class="contact__item__label ng-binding" ng-bind="item.label">Phone</div>
+                    <div class="contact__item__content ng-binding" ng-bind-html="renderContactInfo(item)|safe">+995 555 18 76 23
+                    </div>
+                </div><!-- end ngRepeat: item in contactData -->
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./js/script.js"></script>
+</body>
+</html>
